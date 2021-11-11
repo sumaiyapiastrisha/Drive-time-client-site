@@ -22,7 +22,7 @@ const ConfirmOrder = (props) => {
         const status = "pending";
         const orderdItem = { name: name, email: email, title, price, image, description, address: address, phone: phone, status }
 
-        fetch('http://localhost:5000/orderdItem', {
+        fetch('https://peaceful-hollows-15689.herokuapp.com/orderdItem', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -10,7 +10,7 @@ const ShowMyOrders = (props) => {
     //handle delete an order
     const handleDeleteItem = id => {
 
-        const url = `http://localhost:5000/orderdItem/${id}`;
+        const url = `https://peaceful-hollows-15689.herokuapp.com/orderdItem/${id}`;
         console.log(url)
         fetch(url, {
             method: 'DELETE'

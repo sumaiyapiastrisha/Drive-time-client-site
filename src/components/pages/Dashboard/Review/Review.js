@@ -22,7 +22,7 @@ const Review = () => {
 
 
         // fetch and post
-        fetch('http://localhost:5000/review', {
+        fetch('https://peaceful-hollows-15689.herokuapp.com/review', {
             method: 'POST',
 
             headers: {

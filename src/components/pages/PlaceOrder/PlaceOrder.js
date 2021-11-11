@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Footer from '../../Shared/Footer';
+import Header from '../../Shared/Header';
 import ConfirmOrder from '../ConfirmOrder/ConfirmOrder';
 
 const PlaceOrder = () => {
@@ -8,7 +10,7 @@ const PlaceOrder = () => {
 
     //fetch services collection and show data according to id 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch('https://peaceful-hollows-15689.herokuapp.com/bikes')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
@@ -18,7 +20,9 @@ const PlaceOrder = () => {
     //send data to confirm order component
     return (
         <div>
-
+            <div>
+                <Header></Header>
+            </div>
             <div   >
                 {
 
@@ -29,7 +33,9 @@ const PlaceOrder = () => {
                     ></ConfirmOrder>)
                 }
             </div>
-
+            <div>
+                <Footer></Footer>
+            </div>
         </div>
     );
 };

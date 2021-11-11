@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../Shared/Footer';
 import Header from '../../../Shared/Header';
 import AllProducts from './AllProducts';
 
@@ -13,6 +14,7 @@ const Explore = () => {
             <div>
                 <AllProducts></AllProducts>
             </div>
+            <Footer></Footer>
         </div>
 
     );

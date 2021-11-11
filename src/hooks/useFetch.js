@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
 
-// FOOD TO GO services information fetch
+// Drive time products information fetch
 const useFetch = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch('https://peaceful-hollows-15689.herokuapp.com/bikes')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products])

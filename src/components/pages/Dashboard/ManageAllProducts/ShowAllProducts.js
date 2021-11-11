@@ -7,7 +7,7 @@ const ShowAllProducts = (props) => {
     const [products, setProducts] = useFetch();
     const handleDeleteItem = id => {
 
-        const url = `http://localhost:5000/bikes/${id}`;
+        const url = `https://peaceful-hollows-15689.herokuapp.com/bikes/${id}`;
         console.log(url)
         fetch(url, {
             method: 'DELETE'

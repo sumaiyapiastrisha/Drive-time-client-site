@@ -12,11 +12,9 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Register from './components/pages/Login/Register/Register';
 import PrivateRoute from './components/pages/PrivateRoute/PrivateRoute';
 import PlaceOrder from './components/pages/PlaceOrder/PlaceOrder';
-import MyOrders from './components/pages/Dashboard/MyOrders/MyOrders';
-import ManageAllOrders from './components/pages/Dashboard/ManageAllOrders/ManageAllOrders';
-import AddProduct from './components/pages/Dashboard/AddProduct/AddProduct';
-import MakeAdmin from './components/pages/Dashboard/MakeAdmin/MakeAdmin';
+
 import Explore from './components/pages/Home/Products/Explore';
+import Showreview from './components/pages/Dashboard/Review/Showreview';
 
 
 function App() {
@@ -33,12 +31,8 @@ function App() {
             <Route exact path="/allProducts"><AllProducts></AllProducts></Route>
             <Route exact path="/register"><Register></Register></Route>
             <Route exact path="/products"><Explore></Explore></Route>
-            {/* <Route exact path="/manageAllOrders"><ManageAllOrders></ManageAllOrders></Route>
-            <Route exact path="/myOrders"><MyOrders></MyOrders></Route>
-            <Route exact path="/makeAdmin"><MakeAdmin></MakeAdmin></Route> */}
-            {/* <Route exact path="/addProduct"><AddProduct></AddProduct></Route>
-            <Route exact path="/makeAdmin"><MakeAdmin></MakeAdmin></Route> 
-             <Route exact path="/updateStats"><UpdateStatus></UpdateStatus></Route> */}
+            <Route exact path="/review"><Showreview></Showreview></Route>
+
             <PrivateRoute path="/bikes/:_id"><PlaceOrder></PlaceOrder></PrivateRoute>
 
             <Route path="*"><NotFound></NotFound></Route>
