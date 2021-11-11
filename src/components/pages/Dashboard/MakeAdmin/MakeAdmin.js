@@ -23,8 +23,9 @@ const MakeAdmin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount) {
-                    console.log(data);
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    setEmail('')
                     setSuccess(true);
                 }
             })
@@ -34,14 +35,15 @@ const MakeAdmin = () => {
     return (
         <div>
             <h2>Make an Admin</h2>
-            <form onSubmit={handleAdminSubmit}>
+            <form className="my-4" onSubmit={handleAdminSubmit}>
                 <TextField
+
                     sx={{ width: '50%' }}
                     label="Email"
                     type="email"
                     onBlur={handleOnBlur}
-                    variant="standard" />
-                <Button type="submit" variant="contained">Make Admin</Button>
+                    variant="standard" /><br /><br /><br />
+                <Button type="submit" className="btn btn-primary p-3 px-5">Make Admin</Button>
             </form>
             {success && <Alert severity="success">Made Admin successfully!</Alert>}
         </div>

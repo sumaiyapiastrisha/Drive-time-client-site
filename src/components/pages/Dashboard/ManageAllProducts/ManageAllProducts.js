@@ -10,7 +10,7 @@ const ManageAllProducts = () => {
         <div className="orderss px-5">
 
             <div>
-                <h1 className="py-5  text-danger">MANAGE ALL ORDERS</h1>
+                <h1 className="py-5  text-dark">Manage all Products</h1>
             </div>
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 topServices">

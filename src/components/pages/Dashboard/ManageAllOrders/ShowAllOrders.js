@@ -40,7 +40,7 @@ const ShowAllOrders = (props) => {
         <div className="col service  my-5" >
             <div className="card h-100">
                 <img src={image} class="card-img-top" alt={image} />
-                <div className="card-body">
+                <div className="card-body text-start">
                     <h3 class="card-title text-danger">{title}</h3>
 
                     <p class="card-text fw-bold">Client name  :  {name}</p>
@@ -52,8 +52,8 @@ const ShowAllOrders = (props) => {
 
                 </div>
 
-                <div> <button className="btn btn-danger p-2 px-4 my-3 mx-3" onClick={() => { if (window.confirm('Are you sure you wish to delete this item?')) handleDelete(_id) }}>DELETE</button>
-                    <button className="btn btn-danger p-2 px-4 my-3 mx-3" >update</button></div>
+                <div> <button className="btn  button p-2 px-5 my-3 mx-3" onClick={() => { if (window.confirm('Are you sure you wish to delete this item?')) handleDelete(_id) }}>DELETE</button>
+                    <button className="btn btn-dark text-white p-2 px-5 my-3 mx-3" >update</button></div>
             </div>
         </div>
 

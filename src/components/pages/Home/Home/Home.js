@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from '../../../../hooks/useFetch';
+import Header from '../../../Shared/Header';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
 
@@ -11,6 +12,9 @@ const Home = () => {
     return (
 
         <div>
+            <div>
+                <Header></Header>
+            </div>
             <div>
                 <Banner></Banner>
             </div>
