@@ -6,12 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -28,10 +23,13 @@ import ManageAllProducts from './ManageAllProducts/ManageAllProducts';
 import Review from './Review/Review';
 import Pay from './Pay/Pay';
 import './Dashboard.css'
+import { typography } from '@mui/system';
+import useFirebase from '../../../hooks/useFirebase';
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
+    const { user, logout } = useFirebase();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
@@ -41,25 +39,33 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div >
-            <Toolbar />
-            <Divider />
-            <Link to='/home' className="link  py-3"> Home</Link><br />
-            {!admin && <Box>
-                <Link to={`${url}`} className="link "> Dashboard</Link><br />
-                <Link to={`${url}/myOrders`} className="link"> MyOrders</Link><br />
-                <Link to={`${url}/pay`} className="link"> Pay</Link><br />
 
-                <Link to={`${url}/review`} className="link">   Add Review</Link><br />
+        <div >
+            <Toolbar className="bg-dark"
+
+            />
+            <Divider />
+            <Link to='/home' className="links " ><h4 className="mt-5"> Home</h4></Link><br />
+            {user?.email ?
+                <Button onClick={logout} variant="white" className=" nav-item  border-0  "> <h4>LogOut</h4></Button>
+                :
+                <Link as={Link} to="/login" className=" nav-item "> <h4>Login</h4></Link>
+            }
+            {!admin && <Box>
+                <Link to={`${url}`} className="links "> <h4>Dashboard</h4></Link><br />
+                <Link to={`${url}/myOrders`} class="links  " ><h4>MyOrders</h4> </Link><br />
+                <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br />
+
+                <Link to={`${url}/review`} className="links">  <h4> Add Review</h4></Link><br />
 
             </Box>}
 
             {admin && <Box>
-                <Link to={`${url}`} className="link"> Dashboard</Link><br />
-                <Link to={`${url}/addProduct`} className="link">Add Product</Link><br />
-                <Link to={`${url}/manageAllOrders`} className="link">Manage All Orders</Link><br />
-                <Link to={`${url}/manageAllProducts`} className="link">Manage All Products</Link><br />
-                <Link to={`${url}/makeAdmin`} className="link">Make Admin</Link><br />
+                <Link to={`${url}`} className="links"><h4> Dashboard</h4></Link><br />
+                <Link to={`${url}/addProduct`} className="links"><h4>Add Product</h4></Link><br />
+                <Link to={`${url}/manageAllOrders`} className="links"><h4>Manage All Orders</h4></Link><br />
+                <Link to={`${url}/manageAllProducts`} className="links"><h4>Manage All Products</h4></Link><br />
+                <Link to={`${url}/makeAdmin`} className="links"><h4>Make Admin</h4></Link><br />
             </Box>}
 
         </div>

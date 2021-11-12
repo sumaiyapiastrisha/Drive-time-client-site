@@ -12,7 +12,7 @@ const Showreview = () => {
         <div className=" py-5  review  px-5  ">
 
             <div>
-                <h3 className=" text-start text-danger">All Reviews</h3>
+                <h3 className=" text-start ">All Reviews</h3>
             </div>
 
             <div class="row row-cols-1 ">

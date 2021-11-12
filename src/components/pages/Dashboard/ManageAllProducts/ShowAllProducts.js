@@ -30,7 +30,7 @@ const ShowAllProducts = (props) => {
     return (
         <div className="col service" >
             <div className="card h-100">
-                <img src={image} class="card-img-top" alt={image} />
+                <img src={image} class="card-img-top  image" alt={image} />
                 <div className="card-body text-start">
                     <h3 class="card-title text-start">{title}</h3>
                     <p class="card-text fw-bold">Price  :  {price}</p>

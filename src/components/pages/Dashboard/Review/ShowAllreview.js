@@ -1,7 +1,16 @@
 import React from 'react';
 
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
+
+
 const ShowAllreview = (props) => {
-    const { name, email, description } = props.review
+
+    // const [value, setValue] = React.useState(2);
+    const { name, email, rating, description } = props.review
     console.log(name)
     return (
         <div className="col service  pt-3" >
@@ -11,8 +20,16 @@ const ShowAllreview = (props) => {
 
 
                     <p class="card-text fw-bold ">{name}</p>
-                    <p class="card-text ">{email}</p>
-                    <i class="fas fa-star"></i>
+
+                    <Box
+                        sx={{
+                            '& > legend': { mt: 2 },
+                        }}
+                    >
+
+                        <Rating name="read-only" value={rating} readOnly />
+
+                    </Box>
                     <p class="card-text ">{description}</p>
 
 

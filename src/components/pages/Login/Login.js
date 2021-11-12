@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, CircularProgress, Alert, Grid } from '@mui/material';
-// import { Alert, Button ,Grid,Container} from 'react-bootstrap';
+import { Container, Typography, TextField, CircularProgress, Alert, Grid } from '@mui/material';
+import { Button, } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import { NavLink } from 'react-router-dom';
@@ -28,9 +28,14 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <Container>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+        <>
+            <Grid className="login" spacing={2}>
+
+                {/* <Grid item xs={12} md={6}>
+                    <img style={{ width: '100%' }}
+                        src="https://t4.ftcdn.net/jpg/03/67/23/65240_F_367236511_Pss9edEHDb7dLAvBq3hPnppIK6zBqR65.jpg" alt="" />
+                </Grid> */}
+                <Grid item sx={{ mt: 8 }} xs={12} md={12}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
                         <TextField
@@ -38,6 +43,7 @@ const Login = () => {
                             id="standard-basic"
                             label="Your Email"
                             name="email"
+                            placeholder="Email"
                             onChange={handleOnChange}
                             variant="standard" />
                         <TextField
@@ -46,25 +52,26 @@ const Login = () => {
                             label="Your Password"
                             type="password"
                             name="password"
+                            placeholder="password"
                             onChange={handleOnChange}
-                            variant="standard" />
+                            variant="standard" /><br />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <Button className="btn btn-warning  w-75 mt-4" type="submit" variant="">Login</Button><br />
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/register">
-                            <Button variant="text">New User? Please Register</Button>
+                            <h5 className="text-white  mt-4">New User? Please Register</h5>
                         </NavLink>
                         {isLoading && <CircularProgress />}
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
                     <p>------------------------</p>
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                    <Button onClick={handleGoogleSignIn} className="btn btn-danger">Google Sign In</Button>
                 </Grid>
 
             </Grid>
-        </Container>
+        </>
     );
 };
 

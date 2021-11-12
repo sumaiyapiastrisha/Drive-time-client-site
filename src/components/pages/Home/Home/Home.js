@@ -26,7 +26,7 @@ const Home = () => {
                 </div> : <div className="my-5">
 
                     <div>
-                        <h1 className="my-5 pt-5 text-danger">Top Bikes</h1>
+                        <h1 className="my-5 pt-5 ">Top Bikes</h1>
 
                     </div>
 
@@ -50,20 +50,21 @@ const Home = () => {
                 </div>
 
 
-                <h3 className="mt-5">Our gallery</h3>
+                <h3 className="mt-5  ">Our gallery</h3>
                 <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2  mx-5  my-5">
 
+                    <div className="col  ">
+                        <img className="image" src="https://tse4.mm.bing.net/th?id=OIP.PJ8qhzatDlUZWI6UuQxcVQHaEK&pid=Api&P=0&w=275&h=156" alt="" />
+                    </div>
                     <div className="col ">
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.PJ8qhzatDlUZWI6UuQxcVQHaEK&pid=Api&P=0&w=275&h=156" alt="" />
+                        <img className="image " src="https://tse2.mm.bing.net/th?id=OIP.PJWZeQXxoWYXF2FfJmnqywHaEK&pid=Api&P=0&w=291&h=164" alt="" />
+                    </div>
+                    <div className="col  ">
+                        <img className="image" src="https://tse2.mm.bing.net/th?id=OIP.fgNJrcmGU2em0pnYgcyaSgHaEK&pid=Api&P=0&w=314&h=178" alt="" />
                     </div>
                     <div className="col">
-                        <img src="https://tse2.mm.bing.net/th?id=OIP.PJWZeQXxoWYXF2FfJmnqywHaEK&pid=Api&P=0&w=291&h=164" alt="" />
-                    </div>
-                    <div className="col">
-                        <img src="https://tse2.mm.bing.net/th?id=OIP.fgNJrcmGU2em0pnYgcyaSgHaEK&pid=Api&P=0&w=314&h=178" alt="" />
-                    </div>
-                    <div className="col">
-                        <img src="https://tse2.mm.bing.net/th?id=OIP.w2-EYFUExLspeSKrt4tpGAHaFN&pid=Api&P=0&w=249&h=176" alt="" />
+                        <img className="image "
+                            src="https://tse2.mm.bing.net/th?id=OIP.w2-EYFUExLspeSKrt4tpGAHaFN&pid=Api&P=0&w=249&h=176" alt="" />
                     </div>
                 </div>
 
