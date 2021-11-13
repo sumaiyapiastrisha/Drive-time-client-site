@@ -104,7 +104,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
             console.log("Sign-out successful.")
-            history.push('/');
+            history.replace('/');
         }).catch((error) => {
 
         })
