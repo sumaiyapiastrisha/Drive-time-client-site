@@ -2,12 +2,15 @@
 import { useState, useEffect } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, getIdToken, signOut } from "firebase/auth";
 import initializeAuthentication from "../components/pages/Login/Firebase/firebase.init";
+import { useHistory } from 'react-router';
 
 
 // initialize firebase app
 initializeAuthentication()
 
 const useFirebase = () => {
+
+    const history = useHistory();
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
@@ -101,6 +104,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
             console.log("Sign-out successful.")
+            history.push('/');
         }).catch((error) => {
 
         })
