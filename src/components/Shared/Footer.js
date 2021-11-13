@@ -30,7 +30,7 @@ const Footer = () => {
                         </div>
                         <div class="col-md-6 item text">
                             <h3 className="text-danger">Drive Time</h3>
-                            <p>Get breakfast, lunch, dinner and more deh6vered from your favorite restaurants right to your doorstep with one easy ch6ck. FOOD TO GO Food Deh6very - Deh6vering Now, From Restaurants Near You..</p>
+                            <p>Prefer to Ride to Your Destination on Two Wheels? Rent One of Our Safe and Durable Bikes.</p>
                         </div>
 
                     </div>
