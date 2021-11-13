@@ -5,9 +5,7 @@ import './Dashboard.css'
 const DashboardHome = () => {
 
 
-    // const style ={
-    //     background-color:200: '#ef9a9a';
-    // }
+    //dashboard content
     return (
         <div class="container">
 

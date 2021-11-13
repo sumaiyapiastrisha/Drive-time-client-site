@@ -14,12 +14,18 @@ const Home = () => {
     return (
 
         <div>
+
+            {/* header */}
             <div>
                 <Header></Header>
             </div>
+
+            {/* Banner */}
             <div>
                 <Banner></Banner>
             </div>
+
+            {/* products */}
             <div>
                 {products.length === 0 ? <div className="spinner-border text-danger text-center my-5 " role="status">
                     <span class="visually-hidden">Loading...</span>
@@ -44,12 +50,12 @@ const Home = () => {
                         }
                     </div>
                 </div>}
-
+                {/* reviews */}
                 <div>
                     <Showreview></Showreview>
                 </div>
 
-
+                {/* gallery */}
                 <h3 className="mt-5  ">Our gallery</h3>
                 <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2  mx-5  my-5">
 
@@ -67,7 +73,7 @@ const Home = () => {
                             src="https://tse2.mm.bing.net/th?id=OIP.w2-EYFUExLspeSKrt4tpGAHaFN&pid=Api&P=0&w=249&h=176" alt="" />
                     </div>
                 </div>
-
+                {/* fotter */}
                 <div>
                     <Footer></Footer>
                 </div>

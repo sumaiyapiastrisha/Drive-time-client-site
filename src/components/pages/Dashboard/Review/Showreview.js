@@ -2,13 +2,13 @@ import React from 'react';
 import useReviews from '../../../../hooks/useReviews';
 import ShowAllreview from './ShowAllreview';
 import './Review.css'
-// import useReviews from '../../../../hooks/useReviews'
+
 
 const Showreview = () => {
     const [reviews, setReviews] = useReviews();
     return (
 
-        //send data to showAllOrders component to show  all orders
+        //show review
         <div className=" py-5  review  px-5  ">
 
             <div>

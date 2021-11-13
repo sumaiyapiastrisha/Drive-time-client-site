@@ -51,6 +51,8 @@ function Dashboard(props) {
                 :
                 <Link as={Link} to="/login" className=" nav-item "> <h4>Login</h4></Link>
             }
+
+            {/* if not an admin  */}
             {!admin && <Box>
                 <Link to={`${url}`} className="links "> <h4>Dashboard</h4></Link><br />
                 <Link to={`${url}/myOrders`} class="links  " ><h4>MyOrders</h4> </Link><br />
@@ -60,6 +62,7 @@ function Dashboard(props) {
 
             </Box>}
 
+            {/* // if admin */}
             {admin && <Box>
                 <Link to={`${url}`} className="links"><h4> Dashboard</h4></Link><br />
                 <Link to={`${url}/addProduct`} className="links"><h4>Add Product</h4></Link><br />
@@ -135,6 +138,7 @@ function Dashboard(props) {
             >
                 <Toolbar />
 
+                {/* routes */}
                 <Switch>
                     <Route exact path={path}>
                         <DashboardHome></DashboardHome>

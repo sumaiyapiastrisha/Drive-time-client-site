@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // Drive time reviews information fetch
 const useReviews = () => {
     const [reviews, setReviews] = useState([])
-
+    // fetch reviews
     useEffect(() => {
         fetch('https://peaceful-hollows-15689.herokuapp.com/review')
             .then(res => res.json())

@@ -4,6 +4,8 @@ import { Button, } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import { NavLink } from 'react-router-dom';
+import Footer from '../../Shared/Footer';
+import Header from '../../Shared/Header';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -29,12 +31,16 @@ const Login = () => {
     }
     return (
         <>
+
+            <div>
+                <Header></Header>
+            </div>
             <Grid className="login" spacing={2}>
 
-                {/* <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <img style={{ width: '100%' }}
                         src="https://t4.ftcdn.net/jpg/03/67/23/65240_F_367236511_Pss9edEHDb7dLAvBq3hPnppIK6zBqR65.jpg" alt="" />
-                </Grid> */}
+                </Grid>
                 <Grid item sx={{ mt: 8 }} xs={12} md={12}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
@@ -67,9 +73,11 @@ const Login = () => {
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
                     <p>------------------------</p>
-                    <Button onClick={handleGoogleSignIn} className="btn btn-danger">Google Sign In</Button>
+                    <Button onClick={handleGoogleSignIn} className="btn btn-danger  mb-5">Google Sign In</Button>
                 </Grid>
-
+                <div>
+                    <Footer></Footer>
+                </div>
             </Grid>
         </>
     );

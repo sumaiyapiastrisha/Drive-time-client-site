@@ -11,6 +11,8 @@ const MakeAdmin = () => {
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
+
+    // make admin
     const handleAdminSubmit = e => {
         const user = { email };
         fetch('https://peaceful-hollows-15689.herokuapp.com/users/admin', {
@@ -32,7 +34,10 @@ const MakeAdmin = () => {
 
         e.preventDefault()
     }
+
+    //take new admin email
     return (
+
         <div>
             <h2>Make an Admin</h2>
             <form className="my-4" onSubmit={handleAdminSubmit}>

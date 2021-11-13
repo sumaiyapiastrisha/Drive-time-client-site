@@ -6,7 +6,7 @@ import AllProducts from './AllProducts';
 const Explore = () => {
     return (
 
-
+        //all products page
         <div>
             <div>
                 <Header></Header>

@@ -6,6 +6,7 @@ import initializeAuthentication from "../components/pages/Login/Firebase/firebas
 
 // initialize firebase app
 initializeAuthentication()
+
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -15,6 +16,8 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
+
+    //register new user
     const registerUser = (email, password, name, history) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -40,6 +43,8 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
+
+    //login user
     const loginUser = (email, password, location, history) => {
 
         setIsLoading(true);
@@ -55,7 +60,7 @@ const useFirebase = () => {
 
             .finally(() => setIsLoading(false));
     }
-
+    // login with google account 
     const signInWithGoogle = (location, history) => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
@@ -75,10 +80,7 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                // getIdToken(user)
-                //     .then(idToken => {
-                //         setToken(idToken);
-                //     })
+
             } else {
                 setUser({})
             }
@@ -93,15 +95,19 @@ const useFirebase = () => {
             .then(data => setAdmin(data.admin))
     }, [user.email])
 
+
+    //log out user 
     const logout = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
             console.log("Sign-out successful.")
         }).catch((error) => {
-            // An error happened.
+
         })
             .finally(() => setIsLoading(false));
     }
+
+    //save user to database 
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };

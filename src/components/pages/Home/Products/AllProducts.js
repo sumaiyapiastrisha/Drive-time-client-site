@@ -14,7 +14,7 @@ const AllProducts = () => {
                     <h1 className="my-5 pt-5   ">All bikes</h1>
 
                 </div>
-
+                {/* send data to show products */}
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  mx-5  topServices">
                     {
 

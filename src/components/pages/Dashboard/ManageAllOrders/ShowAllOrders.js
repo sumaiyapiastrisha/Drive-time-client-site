@@ -8,7 +8,7 @@ const ShowAllOrders = (props) => {
     const [orderedItem, setOrderedItem] = useOrders();
     // console.log(orderedItem)
 
-    // handle helete
+    // handle helete orderd item 
     const handleDelete = id => {
 
         const url = `https://peaceful-hollows-15689.herokuapp.com/orderdItem/${id}`;

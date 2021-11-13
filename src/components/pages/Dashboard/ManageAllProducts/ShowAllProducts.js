@@ -5,6 +5,9 @@ const ShowAllProducts = (props) => {
     const { _id, title, image, price, description } = props.product;
 
     const [products, setProducts] = useFetch();
+
+
+    //delete product 
     const handleDeleteItem = id => {
 
         const url = `https://peaceful-hollows-15689.herokuapp.com/bikes/${id}`;

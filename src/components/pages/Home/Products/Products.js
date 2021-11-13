@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
+
+//show all bikes
 const Products = (props) => {
     const [value, setValue] = React.useState(2);
     const { _id, title, image, price, description } = props.product;

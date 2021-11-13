@@ -2,8 +2,8 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Banner.css'
-{/* <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link> */ }
 
+//banner
 const Banner = () => {
     return (
         <div className="header">
