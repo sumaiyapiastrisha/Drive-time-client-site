@@ -66,7 +66,7 @@ const Login = () => {
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/register">
-                            <h5 className="text-white  mt-4">New User? Please Register</h5>
+                            <h5 className="  mt-4">New User? Please Register</h5>
                         </NavLink>
                         {isLoading && <CircularProgress />}
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
