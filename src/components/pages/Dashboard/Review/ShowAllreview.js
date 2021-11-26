@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const ShowAllreview = (props) => {
 
-    // const [value, setValue] = React.useState(2);
+   
     const { name, email, rating, description } = props.review
     console.log(name)
     return (
