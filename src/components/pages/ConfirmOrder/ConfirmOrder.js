@@ -22,7 +22,7 @@ const ConfirmOrder = (props) => {
         const status = "pending";
         const orderdItem = { name: name, email: email, title, price, image, description, address: address, phone: phone, status }
 
-        fetch('https://peaceful-hollows-15689.herokuapp.com/orderdItem', {
+        fetch('http://localhost:5000/orderdItem', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,6 +49,7 @@ const ConfirmOrder = (props) => {
     return (
         <div className=" confirmOrder" >
 
+
             <div class="row g-0  my-5 py-5  mx-5 ">
 
 
@@ -57,6 +58,7 @@ const ConfirmOrder = (props) => {
                 </div>
                 <div class="col-md-6">
                     <div class="card-body   py-5 px-5">
+
                         <h1 class="card-title text-danger pb-4  fw-bold">{title}</h1>
                         <h5 class="card-text   fw-bold">{price}</h5>
                         <p class="card-text">{description}</p>

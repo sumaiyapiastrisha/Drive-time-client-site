@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className="header">
             <h1 className="text-white text-center py-5 "> This is  DRIVE TIME</h1>
-            <h4 className="text-white text-center  px-5 ">Prefer to Ride to Your Destination on Two Wheels? Rent One of Our Safe and Durable Bikes. </h4>
+            <h4 className="text-white text-center  px-5 ">Welcome to Drive Time: Your Ultimate Destination for Old Bike Enthusiasts! </h4>
             <div className="my-5">
                 <Link to="/products">  <Button className=" btn btn-danger px-5 py-3  explore">Explore</Button></Link>
 

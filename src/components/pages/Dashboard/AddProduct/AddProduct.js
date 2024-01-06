@@ -26,7 +26,7 @@ const AddProduct = () => {
 
 
         // fetch and post
-        fetch('https://peaceful-hollows-15689.herokuapp.com/bikes', {
+        fetch('http://localhost:5000/bikes', {
             method: 'POST',
 
             headers: {

@@ -10,7 +10,7 @@ const ShowAllProducts = (props) => {
     //delete product 
     const handleDeleteItem = id => {
 
-        const url = `https://peaceful-hollows-15689.herokuapp.com/bikes/${id}`;
+        const url = `http://localhost:5000/bikes/${id}`;
         console.log(url)
         fetch(url, {
             method: 'DELETE'

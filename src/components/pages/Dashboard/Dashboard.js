@@ -21,10 +21,13 @@ import DashboardHome from './DashboardHome';
 import ManageAllOrders from './ManageAllOrders/ManageAllOrders';
 import ManageAllProducts from './ManageAllProducts/ManageAllProducts';
 import Review from './Review/Review';
+import Feedback from './Feedback/Feedback';
 import Pay from './Pay/Pay';
 import './Dashboard.css'
 import { typography } from '@mui/system';
 import useFirebase from '../../../hooks/useFirebase';
+import AddBlog from './AddBlog/AddBlog';
+
 
 const drawerWidth = 200;
 
@@ -46,19 +49,21 @@ function Dashboard(props) {
             />
             <Divider />
             <Link to='/home' className="links " ><h4 className="mt-5"> Home</h4></Link><br />
-            {user?.email ?
+            {/* {user?.email ?
                 <Button onClick={logout} variant="white" className=" nav-item  border-0  "> <h4>LogOut</h4></Button>
                 :
                 <Link as={Link} to="/login" className=" nav-item "> <h4>Login</h4></Link>
-            }
+            } */}
 
             {/* if not an admin  */}
             {!admin && <Box>
                 <Link to={`${url}`} className="links "> <h4>Dashboard</h4></Link><br />
                 <Link to={`${url}/myOrders`} class="links  " ><h4>MyOrders</h4> </Link><br />
-                <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br />
+                {/* <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br /> */}
 
                 <Link to={`${url}/review`} className="links">  <h4> Add Review</h4></Link><br />
+                <Link to={`${url}/feedback`} className="links">  <h4> Add Complain</h4></Link><br />
+                <Link to={`${url}/blogs`} className="links">  <h4> Add Blog</h4></Link><br />
 
             </Box>}
 
@@ -149,9 +154,17 @@ function Dashboard(props) {
                     <Route exact path={`${path}/review`}>
                         <Review></Review>
                     </Route>
-                    <Route exact path={`${path}/pay`}>
-                        <Pay></Pay>
+                    <Route exact path={`${path}/feedback`}>
+                        <Feedback></Feedback>
                     </Route>
+                    <Route exact path={`${path}/blogs`}>
+                        <AddBlog></AddBlog>
+                    </Route>
+
+                    {/* <Route exact path={`${path}/pay`}>
+                        <Pay></Pay>
+                    </Route> */}
+
 
 
                     <AdminRoute path={`${path}/makeAdmin`}>

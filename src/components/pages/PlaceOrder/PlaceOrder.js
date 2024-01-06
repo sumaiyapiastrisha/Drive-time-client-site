@@ -10,7 +10,7 @@ const PlaceOrder = () => {
 
     //fetch services collection and show data according to id 
     useEffect(() => {
-        fetch('https://peaceful-hollows-15689.herokuapp.com/bikes')
+        fetch('http://localhost:5000/bikes')
             .then(res => res.json())
             .then(data => {
                 setServices(data)

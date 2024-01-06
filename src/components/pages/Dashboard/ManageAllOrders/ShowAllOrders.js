@@ -11,7 +11,7 @@ const ShowAllOrders = (props) => {
     // handle helete orderd item 
     const handleDelete = id => {
 
-        const url = `https://peaceful-hollows-15689.herokuapp.com/orderdItem/${id}`;
+        const url = `http://localhost:5000/orderdItem/${id}`;
 
         fetch(url, {
             method: 'DELETE'

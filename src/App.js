@@ -15,6 +15,8 @@ import PlaceOrder from './components/pages/PlaceOrder/PlaceOrder';
 
 import Explore from './components/pages/Home/Products/Explore';
 import Showreview from './components/pages/Dashboard/Review/Showreview';
+import Information from './components/pages/Information/Information';
+import Blogs from './components/pages/Blogs/Blogs';
 
 
 function App() {
@@ -32,6 +34,10 @@ function App() {
             <Route exact path="/register"><Register></Register></Route>
             <Route exact path="/products"><Explore></Explore></Route>
             <Route exact path="/review"><Showreview></Showreview></Route>
+            <Route exact path="/info"><Information></Information></Route>
+            <Route exact path="/blog"><Blogs></Blogs></Route>
+
+
 
             <PrivateRoute path="/bikes/:_id"><PlaceOrder></PlaceOrder></PrivateRoute>
 
