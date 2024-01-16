@@ -17,6 +17,7 @@ import Explore from './components/pages/Home/Products/Explore';
 import Showreview from './components/pages/Dashboard/Review/Showreview';
 import Information from './components/pages/Information/Information';
 import Blogs from './components/pages/Blogs/Blogs';
+// import ProductList from './components/pages/Home/Products/Productlist';
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
             <Route exact path="/review"><Showreview></Showreview></Route>
             <Route exact path="/info"><Information></Information></Route>
             <Route exact path="/blog"><Blogs></Blogs></Route>
+            {/* <Route exact path="/search"><ProductList></ProductList>  </Route> */}
+
 
 
 

@@ -27,6 +27,7 @@ import './Dashboard.css'
 import { typography } from '@mui/system';
 import useFirebase from '../../../hooks/useFirebase';
 import AddBlog from './AddBlog/AddBlog';
+import SellerForm from './SellerForm/SellerForm';
 
 
 const drawerWidth = 200;
@@ -43,39 +44,44 @@ function Dashboard(props) {
 
     const drawer = (
 
-        <div >
-            <Toolbar className="bg-dark"
+        <div className='text-start   '>
+            <Toolbar className="bg-dark">
+                <h4 className='text-danger ps-0 '>Drive Time</h4>
+            </Toolbar>
 
-            />
-            <Divider />
-            <Link to='/home' className="links " ><h4 className="mt-5"> Home</h4></Link><br />
-            {/* {user?.email ?
-                <Button onClick={logout} variant="white" className=" nav-item  border-0  "> <h4>LogOut</h4></Button>
+            <div className='ps-5'>
+                {/* <Divider /> */}
+                <Link to='/home' className="links " ><p className="mt-5 "> Home</p></Link><br />
+                {/* {user?.email ?
+                <Button onClick={logout} variant="white" className=" nav-item  border-0  "> <p>LogOut</p></Button>
                 :
-                <Link as={Link} to="/login" className=" nav-item "> <h4>Login</h4></Link>
+                <Link as={Link} to="/login" className=" nav-item "> <p>Login</p></Link>
             } */}
 
-            {/* if not an admin  */}
-            {!admin && <Box>
-                <Link to={`${url}`} className="links "> <h4>Dashboard</h4></Link><br />
-                <Link to={`${url}/myOrders`} class="links  " ><h4>MyOrders</h4> </Link><br />
-                {/* <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br /> */}
+                {/* if not an admin  */}
+                {!admin && <Box className='ps-5'>
+                    <Link to={`${url}`} className="links  ps-3"> <p className="ps-5">Dashboard</p></Link><br />
+                    <Link to={`${url}/myOrders`} class="links  " ><p className="ps-5">MyOrders</p> </Link><br />
+                    {/* <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br /> */}
 
-                <Link to={`${url}/review`} className="links">  <h4> Add Review</h4></Link><br />
-                <Link to={`${url}/feedback`} className="links">  <h4> Add Complain</h4></Link><br />
-                <Link to={`${url}/blogs`} className="links">  <h4> Add Blog</h4></Link><br />
+                    <Link to={`${url}/review`} className="links">  <p className="ps-5"> Add Review</p></Link><br />
+                    <Link to={`${url}/feedback`} className="links">  <p className="ps-5"> Add Complain</p></Link><br />
+                    <Link to={`${url}/blogs`} className="links">  <p> Add Blog</p></Link><br />
+                    <Link to={`${url}/sellerform`} className="links">  <p> Post  add</p></Link><br />
 
-            </Box>}
 
-            {/* // if admin */}
-            {admin && <Box>
-                <Link to={`${url}`} className="links"><h4> Dashboard</h4></Link><br />
-                <Link to={`${url}/addProduct`} className="links"><h4>Add Product</h4></Link><br />
-                <Link to={`${url}/manageAllOrders`} className="links"><h4>Manage All Orders</h4></Link><br />
-                <Link to={`${url}/manageAllProducts`} className="links"><h4>Manage All Products</h4></Link><br />
-                <Link to={`${url}/makeAdmin`} className="links"><h4>Make Admin</h4></Link><br />
-            </Box>}
+                </Box>}
 
+                {/* // if admin */}
+                {admin && <Box>
+                    <Link to={`${url}`} className="links"><p> Dashboard</p></Link><br />
+                    <Link to={`${url}/addProduct`} className="links"><p>Add Product</p></Link><br />
+                    <Link to={`${url}/manageAllOrders`} className="links"><p>Manage Orders</p></Link><br />
+                    <Link to={`${url}/manageAllProducts`} className="links"><p>Manage Products</p></Link><br />
+                    <Link to={`${url}/makeAdmin`} className="links"><p>Make Admin</p></Link><br />
+                </Box>}
+
+            </div>
         </div>
     );
 
@@ -161,9 +167,9 @@ function Dashboard(props) {
                         <AddBlog></AddBlog>
                     </Route>
 
-                    {/* <Route exact path={`${path}/pay`}>
-                        <Pay></Pay>
-                    </Route> */}
+                    <Route exact path={`${path}/sellerform`}>
+                        <SellerForm></SellerForm>
+                    </Route>
 
 
 

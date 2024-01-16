@@ -15,7 +15,7 @@ const Showreview = () => {
                 <h3 className=" text-start ">All Reviews</h3>
             </div>
 
-            <div class="row row-cols-1 ">
+            <div class="row row-cols-1 " style={{ maxHeight: '300px', overflowY: 'auto' }}>
                 {
 
                     reviews.map(review => (

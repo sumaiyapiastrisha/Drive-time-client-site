@@ -1,21 +1,31 @@
-.header{
-    background-image:url('https://images.pexels.com/photos/2317408/pexels-photo-2317408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-   height: 100vh;
+.header {
+    background-color: rgb(255, 255, 255);
+    /* background-image: url('https://images.pexels.com/photos/2317408/pexels-photo-2317408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+    /* https://grandprix.qodeinteractive.com/wp-content/uploads/2019/10/h1-rev-img-1-1.png */
+    height: 100vh;
     background-size: cover;
     width: 100%;
     /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ; */
-   
+
 
 }
 
-.explore:hover btn{
-    background-color: brown;
+.explore:hover btn {
+    background-color: rgb(253, 249, 249);
 }
 
-.image{
-height: 250px;
-width: 100%;
+.image {
+    height: 250px;
+    width: 100%;
 }
+
+@keyframes slideIn {
+    to {
+        left: 0%;
+        /* Slide the image to the center */
+    }
+}
+
 /* .login{
     background-image: url("https://images.pexels.com/photos/2317408/pexels-photo-2317408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     height: 100vh;
@@ -29,3 +39,14 @@ width: 100%;
 https://images.pexels.com/photos/1119796/pexels-photo-1119796.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 */
 
 /* https://cdp.azureedge.net/products/USA/YA/2020/MC/SPORT/MT-10/50/MATTE_RAVEN_BLACK/2000000034.jpg */
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    /* White color */
+}
+
+/* Change text color to ash on hover */
+.navbar-nav .nav-link:hover {
+    color: #808080 !important;
+    /* Ash color */
+}

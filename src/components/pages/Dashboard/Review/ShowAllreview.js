@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 const ShowAllreview = (props) => {
 
-   
+
     const { name, email, rating, description } = props.review
     console.log(name)
     return (
