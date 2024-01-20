@@ -8,7 +8,7 @@ import './Product.css'
 //show all bikes
 const Products = (props) => {
     const [value, setValue] = React.useState(2);
-    const { _id, title, image, price, description } = props.product;
+    const { _id, title, image, price, model, brand, location, engineCapacity, kilometersRun, bikeType, year, condition, description } = props.product;
 
     return (
         <div className=" " >
@@ -22,6 +22,7 @@ const Products = (props) => {
                             <div class="col-md-3 mt-1 "><img class="img-fluid img-responsive rounded product-image" src={image} /></div>
                             <div class="col-md-6 mt-1">
                                 <h5>{title}</h5>
+                                <p>{year}</p>
                                 <div><Box
                                     sx={{
                                         '& > legend': { mt: 2 },
@@ -33,8 +34,8 @@ const Products = (props) => {
                                     <Rating name="read-only" value={5} readOnly />
 
                                 </Box></div>
-                                <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br /></span></div>
-                                <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br /></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>{model} </span><span class="dot"></span><span>{engineCapacity}</span><span class="dot"></span><span>{brand}<br /></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>{condition}</span><span class="dot"></span><span>{kilometersRun} kilometers run</span><span class="dot"></span><span>{location}<br /></span></div>
                                 <p class="text-justify text-truncate para mb-0">{description}<br /><br /></p>
                             </div>
                             <div class="align-items-center align-content-center col-md-3 border-left mt-1">
@@ -42,7 +43,7 @@ const Products = (props) => {
                                     <h4 class="mr-1">{price} Tk</h4>
                                     {/* <span class="strike-text">$20.99</span> */}
                                 </div>
-                                <h6 class="text-success">Free shipping</h6>
+
                                 <div class="d-flex flex-column ">
                                     <Link to={`/bikes/${_id}`} className='mt-4' >
                                         <button className="btn  button btn-warning p-2 pe-5 px-4  mb-4">See details</button>

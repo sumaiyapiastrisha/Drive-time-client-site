@@ -88,57 +88,57 @@ const AddProduct = () => {
             <div className="font   py-5 register-services  w-100">
                 <h2 className="">Please Add New Product</h2>
                 <form onSubmit={handlehtmlForm}>
-                    <input className="mt-3 w-50 p-3" ref={nameRef} type="text" required placeholder="Full name" value={user.displayName} /><br />
-                    <input className="mt-3 w-50 p-3" ref={emailRef} type="text" required placeholder="Type email or username" value={user.email} /><br />
-                    <input className="mt-3 w-50 p-3" ref={desRef} type="text" id="name" name="lastname" placeholder="Service  Description.." /><br />
-                    <input className="mt-3 w-50 p-3" ref={titleRef} required type="text" id="name" name="lastname" placeholder="  title (uppercase)" /><br />
-                    <input className="mt-3 w-50 p-3" ref={priceRef} required type="text" id="name" name="lastname" placeholder="Enter price" /><br />
-                    <input className="mt-3 w-50 p-3" ref={imgRef} required type="text" id="name" name="lastname" placeholder="Insert image link" /><br />
+                    <input className="mt-3 w-50 p-3 " ref={nameRef} type="text" required placeholder="Full name" value={user.displayName} /><br />
+                    <input className="mt-3  rounded shadow border-0 w-50 p-3" ref={emailRef} type="text" required placeholder="Type email or username" value={user.email} /><br />
+                    <input className="mt-3 rounded shadow border-0 w-50 p-3" ref={desRef} type="text" id="name" name="lastname" placeholder="Service  Description.." /><br />
+                    <input className="mt-3 rounded shadow border-0 w-50 p-3" ref={titleRef} required type="text" id="name" name="lastname" placeholder="  title (uppercase)" /><br />
+                    <input className="mt-3 rounded shadow border-0 w-50 p-3" ref={priceRef} required type="text" id="name" name="lastname" placeholder="Enter price" /><br />
+                    <input className="mt-3 rounded shadow border-0 w-50 p-3" ref={imgRef} required type="text" id="name" name="lastname" placeholder="Insert image link" /><br />
 
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={bikeTypeRef}
                         required
                         type="text"
                         placeholder="Bike Type"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={brandRef}
                         required
                         type="text"
                         placeholder="Brand"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={modelRef}
                         required
                         type="text"
                         placeholder="Model"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={yearRef}
                         required
                         type="text"
                         placeholder="Location"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={conditionRef}
                         required
                         type="text"
                         placeholder="Condition"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={engineCapacityRef}
                         required
                         type="text"
                         placeholder="Engine Capacity"
                     /><br />
                     <input
-                        className="mt-3 w-50 p-3"
+                        className="mt-3 rounded shadow border-0 w-50 p-3"
                         ref={kilometersRunRef}
                         required
                         type="text"

@@ -89,20 +89,20 @@ const Home = () => {
                 </div> : <div className="my-5">
 
                     <div>
-                        <h1 className="my-5 pt-5 ">Top Bikes</h1>
+                        <h1 className="my-5 pt-5 ">Recent Bikes</h1>
 
                     </div>
 
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4   text-start  topServices">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  p-card text-center  topServices">
                         {
 
                             sliceProducts.map(product => (
 
                                 <div className="col service" >
-                                    <div className="card  border-0 , shadow h-100">
+                                    <div className="card  border-0 , shadow ">
                                         <img src={product.image} class="card-img-top  image" alt={product.image} />
                                         <div className="card-body">
-                                            <h3 class="card-title my-3">{product.title}</h3>
+                                            <h6 class="card-title my-3">{product.title}</h6>
 
                                             <div className="d-flex justify-content-around">
                                                 <div> <p class="card-text fw-bold">Price  :  {product.price}</p></div>
@@ -120,14 +120,15 @@ const Home = () => {
                                             </div>
 
 
-                                            <p class="card-text">{product.description}</p>
+
 
                                         </div>
 
                                         <Link to={`/bikes/${product._id}`} >
-                                            <button className="btn  button btn-warning p-2 px-4  mb-4">Purchase now</button>
+                                            <button className="btn  button btn-warning p-2 px-4  mb-4">See details</button>
                                         </Link>
                                     </div>
+
                                 </div>
 
                                 // <Products
@@ -139,15 +140,16 @@ const Home = () => {
                             )
                         }
                     </div>
+
                 </div>}
                 {/* reviews */}
-                <div>
+                <div className='review'>
                     <Showreview></Showreview>
                 </div>
 
                 {/* gallery */}
                 <h3 className="mt-5  ">Our gallery</h3>
-                <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2  mx-5  my-5">
+                <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-2  ms-5 review my-5">
 
                     <div className="col  ">
                         <img className="image" src="https://tse4.mm.bing.net/th?id=OIP.PJ8qhzatDlUZWI6UuQxcVQHaEK&pid=Api&P=0&w=275&h=156" alt="" />

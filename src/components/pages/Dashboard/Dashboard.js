@@ -28,7 +28,24 @@ import { typography } from '@mui/system';
 import useFirebase from '../../../hooks/useFirebase';
 import AddBlog from './AddBlog/AddBlog';
 import SellerForm from './SellerForm/SellerForm';
+import { ListItem, ListItemIcon, ListItemText } from '@mui/material';
+// import { ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import RateReviewIcon from '@mui/icons-material/RateReview';
+import FeedbackIcon from '@mui/icons-material/Feedback';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import AddIcon from '@mui/icons-material/Add';
+import ChatIcon from '@mui/icons-material/Chat';
+import CreateIcon from '@mui/icons-material/Create';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+// import AddCircleIcon from '@material-ui/icons/AddCircle';
+// import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+// import StorageIcon from '@material-ui/icons/Storage';
+// import PersonIcon from '@material-ui/icons/Person';
 
+// import AssignmentIcon from '@material-ui/icons/Assignment'; // Use 'AssignmentIcon' instead of 'Storage'
 
 const drawerWidth = 200;
 
@@ -44,14 +61,22 @@ function Dashboard(props) {
 
     const drawer = (
 
-        <div className='text-start   '>
+        <div className='text-start h-100  '>
             <Toolbar className="bg-dark">
                 <h4 className='text-danger ps-0 '>Drive Time</h4>
             </Toolbar>
 
-            <div className='ps-5'>
+            <div className='mt-0 h-100' style={{ backgroundColor: '#f4a460', color: '#ffffff', }}>
                 {/* <Divider /> */}
-                <Link to='/home' className="links " ><p className="mt-5 "> Home</p></Link><br />
+                <ListItem button component={Link} to='/home' style={{ backgroundColor: '#f4a460', color: '#ffffff', marginTop: '' }}>
+                    <ListItemIcon>
+                        <HomeIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Home" />
+                </ListItem>
+                <br />
+
+                {/* <Link to='/home' className="links " ><p className="mt-5 "> Home</p></Link><br /> */}
                 {/* {user?.email ?
                 <Button onClick={logout} variant="white" className=" nav-item  border-0  "> <p>LogOut</p></Button>
                 :
@@ -59,26 +84,106 @@ function Dashboard(props) {
             } */}
 
                 {/* if not an admin  */}
-                {!admin && <Box className='ps-5'>
-                    <Link to={`${url}`} className="links  ps-3"> <p className="ps-5">Dashboard</p></Link><br />
-                    <Link to={`${url}/myOrders`} class="links  " ><p className="ps-5">MyOrders</p> </Link><br />
+                {!admin && <Box className=''>
+
+                    <ListItem button component={Link} to={`${url}/addProduct`} style={{}}>
+                        <ListItemIcon>
+                            <PostAddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Post Ad" />
+                    </ListItem>
+                    {/* <ListItem button component={Link} to={`${url}/addProduct`} style={{}}>
+                        <ListItemIcon>
+                            <DashboardIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Dashboard" />
+                    </ListItem> */}
+                    <br />
+                    <ListItem button component={Link} to={`${url}/myOrders`} style={{}}>
+                        <ListItemIcon>
+                            <ShoppingCartIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="My Orders" />
+                    </ListItem>
+                    <br />
+
+                    <ListItem button component={Link} to={`${url}/review`} style={{}}>
+                        <ListItemIcon>
+                            <ChatIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Add review" />
+                    </ListItem>
+
+                    <br />
+                    <ListItem button component={Link} to={`${url}/feedback`} style={{}}>
+                        <ListItemIcon>
+                            <CreateIcon />
+                        </ListItemIcon>
+                        <ListItemText primary=" Feedback" />
+                    </ListItem>
+                    <br />
+                    <ListItem button component={Link} to={`${url}/blogs`} style={{}}>
+                        <ListItemIcon>
+                            <AddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Add blog" />
+                    </ListItem>
+                    <br />
+
+                    {/* <Link to={`${url}/addProduct`} className="links  "> <p className="">Dashboard</p></Link><br />
+                    <Link to={`${url}/myOrders`} class="links  " ><p className="">MyOrders</p> </Link><br /> */}
                     {/* <Link to={`${url}/pay`} className="links"><h3>Pay</h3> </Link><br /> */}
 
-                    <Link to={`${url}/review`} className="links">  <p className="ps-5"> Add Review</p></Link><br />
-                    <Link to={`${url}/feedback`} className="links">  <p className="ps-5"> Add Complain</p></Link><br />
+                    {/* <Link to={`${url}/review`} className="links">  <p className=""> Add Review</p></Link><br />
+                    <Link to={`${url}/feedback`} className="links">  <p className=""> Add Complain</p></Link><br />
                     <Link to={`${url}/blogs`} className="links">  <p> Add Blog</p></Link><br />
-                    <Link to={`${url}/sellerform`} className="links">  <p> Post  add</p></Link><br />
+                    <Link to={`${url}/addProduct`} className="links">  <p> Post  add</p></Link><br /> */}
+
+
+
+
+                    <br />
+
 
 
                 </Box>}
 
                 {/* // if admin */}
                 {admin && <Box>
-                    <Link to={`${url}`} className="links"><p> Dashboard</p></Link><br />
-                    <Link to={`${url}/addProduct`} className="links"><p>Add Product</p></Link><br />
-                    <Link to={`${url}/manageAllOrders`} className="links"><p>Manage Orders</p></Link><br />
-                    <Link to={`${url}/manageAllProducts`} className="links"><p>Manage Products</p></Link><br />
-                    <Link to={`${url}/makeAdmin`} className="links"><p>Make Admin</p></Link><br />
+                    <ListItem button component={Link} to={`${url}/addProduct`} className="links">
+                        <ListItemIcon>
+                            <DashboardIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Dashboard" />
+                    </ListItem>
+
+                    <ListItem button component={Link} to={`${url}/addProduct`} className="links">
+                        <ListItemIcon>
+                            <AddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Add Product" />
+                    </ListItem>
+
+                    <ListItem button component={Link} to={`${url}/manageAllOrders`} className="links">
+                        <ListItemIcon>
+                            <ShoppingCartIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Manage Orders" />
+                    </ListItem>
+
+                    <ListItem button component={Link} to={`${url}/manageAllProducts`} className="links">
+                        <ListItemIcon>
+                            <AddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Manage Products" />
+                    </ListItem>
+
+                    <ListItem button component={Link} to={`${url}/makeAdmin`} className="links">
+                        <ListItemIcon>
+                            <AddIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Make Admin" />
+                    </ListItem>
                 </Box>}
 
             </div>
@@ -152,7 +257,7 @@ function Dashboard(props) {
                 {/* routes */}
                 <Switch>
                     <Route exact path={path}>
-                        <DashboardHome></DashboardHome>
+                        <AddProduct></AddProduct>
                     </Route>
                     <Route exact path={`${path}/myOrders`}>
                         <MyOrders></MyOrders>

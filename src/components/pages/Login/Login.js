@@ -35,7 +35,64 @@ const Login = () => {
             <div>
                 <Header></Header>
             </div>
-            <Grid className="login" spacing={2}>
+
+
+
+            <div className="container ">
+
+                <div className="card l-card r-card d-flex flex-direction-row">
+                    <div className="l-card-image">
+                        <h2 className="card-heading text-white">
+                            Wellcome Back
+                            <small>Let us login your account</small>
+                        </h2>
+                    </div>
+                    <div>
+                        <form onSubmit={handleLoginSubmit} className="card-form">
+
+
+                            <div className="input">
+                                <input type="email" name="email"
+
+                                    onBlur={handleOnChange} className="input-field" required />
+                                <label className="input-label">Email</label>
+                            </div>
+                            <div className="input">
+                                <input type="password"
+                                    name="password"
+                                    onBlur={handleOnChange} className="input-field" required />
+                                <label className="input-label">Password</label>
+                            </div>
+
+                            <div className="action">
+                                <button type='submit' className="action-button">Get started</button>
+                            </div>
+                        </form>
+
+                        <NavLink
+                            style={{ textDecoration: 'none' }}
+                            to="/register">
+                            <h5 className="  mt-4">New User? Please Register</h5>
+                        </NavLink>
+                        {/* {isLoading && <CircularProgress />} */}
+                        {user?.email && <Alert severity="success">Login successfully!</Alert>}
+                        {authError && <Alert severity="error">{authError}</Alert>}
+
+                    </div>
+                    <Button onClick={handleGoogleSignIn} className="btn mx-3  mb-5">Google Sign In</Button>
+                </div>
+
+
+            </div>
+
+            {/* </div > */}
+
+
+
+
+
+
+            {/* <Grid className="login" spacing={2}>
 
                 <Grid item xs={12} md={6}>
                     <img style={{ width: '100%' }}
@@ -62,23 +119,23 @@ const Login = () => {
                             onChange={handleOnChange}
                             variant="standard" /><br />
 
-                        <Button className="btn btn-warning  w-75 mt-4" type="submit" variant="">Login</Button><br />
-                        <NavLink
+                        <Button className="btn btn-warning  w-75 mt-4" type="submit" variant="">Login</Button><br /> */}
+            {/* <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/register">
                             <h5 className="  mt-4">New User? Please Register</h5>
                         </NavLink>
                         {isLoading && <CircularProgress />}
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
-                        {authError && <Alert severity="error">{authError}</Alert>}
-                    </form>
-                    <p>------------------------</p>
-                    <Button onClick={handleGoogleSignIn} className="btn btn-danger  mb-5">Google Sign In</Button>
-                </Grid>
-                <div>
-                    <Footer></Footer>
-                </div>
-            </Grid>
+                        {authError && <Alert severity="error">{authError}</Alert>} */}
+            {/* </form> */}
+            {/* <p>------------------------</p> */}
+            {/* <Button onClick={handleGoogleSignIn} className="btn btn-danger  mb-5">Google Sign In</Button>
+                </Grid> */}
+            <div>
+                <Footer></Footer>
+            </div>
+            {/* </Grid > */}
         </>
     );
 };

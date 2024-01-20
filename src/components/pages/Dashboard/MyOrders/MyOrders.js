@@ -11,9 +11,10 @@ const MyOrders = () => {
     const [orderedItem, setOrderedItem] = useOrders(); //useAllorders custom hook
 
     return (
-        <div className="orderss">
-            <div className="text-danger mt-5 "><h1>MY ORDERS</h1></div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  mx-5 my-5"  >
+        <div className="">
+            {/* orderss */}
+            {/* <div className="text-danger mt-5 "><h1>MY ORDERS</h1></div> */}
+            <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  mx-5 my-5"  >
                 {
 
                     orderedItem.filter(item => item.email == email).map(item => <ShowMyOrders

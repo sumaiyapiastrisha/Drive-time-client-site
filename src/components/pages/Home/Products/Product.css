@@ -1,6 +1,6 @@
-body {
+/* body {
     background: #eee
-}
+} */
 
 .ratings i {
     font-size: 16px;
@@ -38,4 +38,10 @@ h5 {
 
 .para {
     font-size: 16px
+}
+
+.search {
+    height: 40vh;
+    background-color: aliceblue;
+    margin-top: 0px;
 }

@@ -1,0 +1,22 @@
+.p-top {
+    height: 40vh;
+    background-color: #f6f6f6;
+
+}
+
+.p-card {
+    margin-top: -10%;
+}
+
+.p-img {
+    margin-top: -25%;
+    margin-left: -25%;
+    height: 200px;
+    width: 400px;
+}
+
+p-form {
+    margin-left: 0px;
+    text-align: start;
+    width: 100%;
+}

@@ -3,6 +3,17 @@
     color: rgb(183, 182, 182);
 }
 
+.p-card {
+    height: 50%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.review {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
 /* }
 
 $color-primary-white: rgb(240, 240, 240);
